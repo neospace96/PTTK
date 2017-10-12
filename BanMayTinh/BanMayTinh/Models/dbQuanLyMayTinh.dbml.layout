@@ -1,0 +1,82 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ordesignerObjectsDiagram dslVersion="1.0.0.0" absoluteBounds="0, 0, 11, 9.75" name="dbQuanLyMayTinh">
+  <DataContextMoniker Name="/dbQuanLyMayTinhDataContext" />
+  <nestedChildShapes>
+    <classShape Id="0917e228-7598-46ff-b692-8a33a591e54f" absoluteBounds="6.75, 1.125, 2, 1.5785953776041666">
+      <DataClassMoniker Name="/dbQuanLyMayTinhDataContext/__MigrationHistory" />
+      <nestedChildShapes>
+        <elementListCompartment Id="79ff2b70-6d44-4b34-a79c-18280c773114" absoluteBounds="6.765, 1.585, 1.9700000000000002, 1.0185953776041665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="4e3a1abc-5820-4ee3-b5d6-a4d34864ecf5" absoluteBounds="6.75, 4.125, 2, 2.7324039713541666">
+      <DataClassMoniker Name="/dbQuanLyMayTinhDataContext/SanPham" />
+      <nestedChildShapes>
+        <elementListCompartment Id="ab3bfdac-2fb0-448a-9054-c6d0660e748b" absoluteBounds="6.765, 4.585, 1.9700000000000002, 2.1724039713541665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="47a55c5e-2112-4700-a6c4-5873f359f773" absoluteBounds="0.75, 0.75, 2, 1.1939925130208335">
+      <DataClassMoniker Name="/dbQuanLyMayTinhDataContext/AspNetRole" />
+      <nestedChildShapes>
+        <elementListCompartment Id="c4ca2526-466d-41c6-b96f-f5efed58ac97" absoluteBounds="0.765, 1.21, 1.9700000000000002, 0.63399251302083326" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="e37afa49-8180-44d6-8a95-41a486ee09da" absoluteBounds="3.5, 6.625, 2, 1.5785953776041666">
+      <DataClassMoniker Name="/dbQuanLyMayTinhDataContext/AspNetUserClaim" />
+      <nestedChildShapes>
+        <elementListCompartment Id="5ec05325-ea2c-46be-883c-e4bd21d188b3" absoluteBounds="3.515, 7.085, 1.9700000000000002, 1.0185953776041665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="ee205b30-6b28-4685-a61c-8d7505df17b3" absoluteBounds="3.5, 4.375, 2, 1.3862939453125005">
+      <DataClassMoniker Name="/dbQuanLyMayTinhDataContext/AspNetUserLogin" />
+      <nestedChildShapes>
+        <elementListCompartment Id="1eea774d-907a-4731-be24-384f89e6a683" absoluteBounds="3.515, 4.835, 1.9700000000000002, 0.8262939453125" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="fb2d6189-83f2-469b-90da-047476fa7405" absoluteBounds="3.5, 1.75, 2, 1.1939925130208335">
+      <DataClassMoniker Name="/dbQuanLyMayTinhDataContext/AspNetUserRole" />
+      <nestedChildShapes>
+        <elementListCompartment Id="e0a4848b-3ba1-433e-b5d2-d1e613cc0a6d" absoluteBounds="3.515, 2.21, 1.9700000000000002, 0.63399251302083326" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="7de8881c-fe13-4cc8-8270-2368cb17197c" absoluteBounds="0.75, 2.75, 2, 3.1170068359375">
+      <DataClassMoniker Name="/dbQuanLyMayTinhDataContext/AspNetUser" />
+      <nestedChildShapes>
+        <elementListCompartment Id="980c8cbc-7a34-4395-95c9-356b0bd7f145" absoluteBounds="0.765, 3.21, 1.9700000000000002, 2.5570068359375" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="fd3d40f6-cacb-46c4-b638-c947f5727b26" absoluteBounds="6.75, 8.125, 2, 1.3862939453125005">
+      <DataClassMoniker Name="/dbQuanLyMayTinhDataContext/LoaiSanPham" />
+      <nestedChildShapes>
+        <elementListCompartment Id="1282ca5b-a8cb-4856-a900-aeb4cb05c9b9" absoluteBounds="6.765, 8.585, 1.9700000000000002, 0.8262939453125" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(1.75 : 1.94399251302083); (1.75 : 2.34699625651042); (3.5 : 2.34699625651042)]" fixedFrom="Algorithm" fixedTo="NotFixed">
+      <AssociationMoniker Name="/dbQuanLyMayTinhDataContext/AspNetRole/AspNetRole_AspNetUserRole" />
+      <nodes>
+        <classShapeMoniker Id="47a55c5e-2112-4700-a6c4-5873f359f773" />
+        <classShapeMoniker Id="fb2d6189-83f2-469b-90da-047476fa7405" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(1.75 : 5.8670068359375); (1.75 : 7.41429768880208); (3.5 : 7.41429768880208)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/dbQuanLyMayTinhDataContext/AspNetUser/AspNetUser_AspNetUserClaim" />
+      <nodes>
+        <classShapeMoniker Id="7de8881c-fe13-4cc8-8270-2368cb17197c" />
+        <classShapeMoniker Id="e37afa49-8180-44d6-8a95-41a486ee09da" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(2.75 : 5.06814697265625); (3.5 : 5.06814697265625)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/dbQuanLyMayTinhDataContext/AspNetUser/AspNetUser_AspNetUserLogin" />
+      <nodes>
+        <classShapeMoniker Id="7de8881c-fe13-4cc8-8270-2368cb17197c" />
+        <classShapeMoniker Id="ee205b30-6b28-4685-a61c-8d7505df17b3" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(2.75 : 2.75); (3.125 : 2.375); (3.125 : 3.31899251302083); (3.5 : 2.94399251302083)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/dbQuanLyMayTinhDataContext/AspNetUser/AspNetUser_AspNetUserRole" />
+      <nodes>
+        <classShapeMoniker Id="7de8881c-fe13-4cc8-8270-2368cb17197c" />
+        <classShapeMoniker Id="fb2d6189-83f2-469b-90da-047476fa7405" />
+      </nodes>
+    </associationConnector>
+  </nestedChildShapes>
+</ordesignerObjectsDiagram>

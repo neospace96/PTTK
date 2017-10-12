@@ -1,0 +1,26 @@
+﻿@foreach (var item in Model)
+{
+    <div class="col-sm-4 col-md-3  no-margin product-item-holder hover">
+        <div class="product-item">
+            <div class="ribbon red"><span>sale</span></div>
+            <div class="image">
+                <img alt="" src="/assets/images/blank.gif" data-echo="/assets/images/products/1.png" />
+            </div>
+            <div class="body">
+                <div class="label-discount green">-50% sale</div>
+                <div class="title">
+                    <a href="single-product.html">@item.TenSanPham</a>
+                </div>
+                <div class="brand">@item.MaNhaSanXuat</div>
+            </div>
+            <div class="prices">
+                <div class="price-current pull-right">@String.Format("{0:0,0}", item.GiaBan) VNĐ</div>
+            </div>
+            <div class="hover-area">
+                <div class="add-cart-button">
+                    <a href="single-product.html" class="le-button">Thêm vào giỏ hàng</a>
+                </div>
+            </div>
+        </div>
+    </div>
+}
