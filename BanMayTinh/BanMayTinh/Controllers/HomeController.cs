@@ -3,38 +3,28 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
-using BanMayTinh.Models;
 
 namespace BanMayTinh.Controllers
 {
     public class HomeController : Controller
     {
-        dbQuanLyMayTinhDataContext data = new dbQuanLyMayTinhDataContext();
         public ActionResult Index()
         {
             return View();
         }
 
-        public ActionResult DacSac()
+        public ActionResult About()
         {
-            var sanpham = data.SanPhams.OrderByDescending(a => a.GiaBan).Take(4).ToList();
-            //var sanpham = from sp in data.SanPhams orderby sp.MaSanPham ascending select sp;
-            return PartialView(sanpham);
+            ViewBag.Message = "Your application description page.";
+
+            return View();
         }
 
-        public ActionResult XuHuong()
+        public ActionResult Contact()
         {
-            var sanpham = data.SanPhams.OrderByDescending(a => a.TenSanPham).Take(4).ToList();
-            //var sanpham = from sp in data.SanPhams orderby sp.MaSanPham ascending select sp;
-            return PartialView(sanpham);
-        }
+            ViewBag.Message = "Your contact page.";
 
-        public ActionResult TopSales()
-        {
-            var sanpham = data.SanPhams.OrderBy(a => a.GiaBan).Take(4).ToList();
-            //var sanpham = from sp in data.SanPhams orderby sp.MaSanPham ascending select sp;
-            return PartialView(sanpham);
+            return View();
         }
-
     }
 }
