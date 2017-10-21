@@ -1,0 +1,22 @@
+﻿<!-- //TOVAR -->
+@foreach (var sanpham in Model)
+{
+    <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6 col-ss-12 padbot40">
+        <div class="tovar_item">
+            <div class="tovar_img">
+                <div class="tovar_img_wrapper">
+                    <img class="img" src="~/images/hinhsanpham/@sanpham.Hinh1" alt="" />
+                    <img class="img_h" src="~/images/hinhsanpham/@sanpham.Hinh2" alt="" />
+                </div>
+                <div class="tovar_item_btns">
+                    <div class="open-project-link"><a class="open-project tovar_view" href="@Url.Action("XemNhanh","Shop", new { id = sanpham.MaSanPham })">xem nhanh</a></div>
+                    <a class="add_bag" href="@Url.Action("ThemGioHang","GioHang", new { @sMaSanPham = @sanpham.MaSanPham, strURL= Request.Url.ToString() })"><i class="fa fa-shopping-cart"></i></a>
+                </div>
+            </div>
+            <div class="tovar_description clearfix">
+                <a class="tovar_title" href="@Url.Action("ChiTiet", "Shop", new { id = sanpham.MaSanPham })">@sanpham.TenSanPham</a>
+                <span class="tovar_price">@String.Format("{0:0,0}", sanpham.GiaBan) VNĐ</span>
+            </div>
+        </div>
+    </div><!-- //TOVAR -->
+}

@@ -1,0 +1,35 @@
+﻿@model SadiShop.Models.ThuongHieu
+
+@{
+    ViewBag.Title = "Sửa Thương Hiệu - SadiShop";
+    Layout = "~/Views/Shared/_LayoutAdmin.cshtml";
+}
+
+@using (Html.BeginForm(Html.BeginForm("SuaThuongHieu", "Admin", FormMethod.Post, new { @enctype = "multipart/form-data" })))
+{
+    @Html.AntiForgeryToken()
+    
+    <div class="form-horizontal">
+        <h4>SỬA THÔNG TIN THƯƠNG HIỆU</h4>
+        <hr />
+        @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+        @Html.HiddenFor(model => model.MaThuongHieu)
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.TenThuongHieu, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.TenThuongHieu, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.TenThuongHieu, "", new { @class = "text-danger" })
+            </div>
+        </div>
+        <div class="form-group">
+            <div class="col-md-offset-2 col-md-10">
+                <input type="submit" value="Sủa thương hiệu" class="btn btn-info" />
+            </div>
+        </div>
+    </div>
+}
+
+<div>
+    @Html.ActionLink("Trở về", "LoaiSanPham")
+</div>

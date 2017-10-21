@@ -1,0 +1,8 @@
+﻿@foreach (var item in Model)
+    {
+        <li class="clearfix">
+            <img class="tovar_item_small_img" src="~/images/hinhsanpham/@item.Hinh1" alt="" />
+            <a href="@Url.Action("ChiTiet", "Shop", new { id = item.MaSanPham })" class="tovar_item_small_title">@item.TenSanPham</a>
+            <span class="tovar_item_small_price">@String.Format("{0:0,0}", @item.GiaBan) VNĐ</span>
+        </li>
+    }
