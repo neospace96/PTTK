@@ -417,6 +417,36 @@ namespace SadiShop.Controllers
             }
             return View(sp);
         }
+
+        [HttpGet]
+        public ActionResult XoaDonHang(int id)
+        {
+            DonDatHang sp = data.DonDatHangs.SingleOrDefault(n => n.MaDonDatHang == id);
+            //ViewBag.MaSanPham = sp.MaSanPham;
+            if (sp == null)
+            {
+                Response.StatusCode = 404;
+                return null;
+            }
+            return View(sp);
+        }
+
+        [HttpPost, ActionName("XoaDonHang")]
+        public ActionResult XacNhanXoaDonHang(int id)
+        {
+            DonDatHang sp = data.DonDatHangs.SingleOrDefault(n => n.MaDonDatHang == id);
+            var ct = data.ChiTietDonDatHangs.Where(n => n.MaDonDatHang == id).ToList();
+            ViewBag.MaThuongHieuSanPham = sp.MaDonDatHang;
+            if (sp == null)
+            {
+                Response.StatusCode = 404;
+                return null;
+            }
+            data.ChiTietDonDatHangs.DeleteAllOnSubmit(ct);
+            data.DonDatHangs.DeleteOnSubmit(sp);
+            data.SubmitChanges();
+            return RedirectToAction("QuanLyDonHangChuaDyet");
+        }
         //----------------------------------------------TAIKHOAN-------------------------------------------------
     }
 }
