@@ -157,14 +157,17 @@ namespace SadiShop.Controllers
                 if (result.Succeeded)
                 {
                     await SignInManager.SignInAsync(user, isPersistent:false, rememberBrowser:false);
-                    
+
+                    await SignInManager.SignInAsync(user, isPersistent: false, rememberBrowser: false);
+
                     // For more information on how to enable account confirmation and password reset please visit https://go.microsoft.com/fwlink/?LinkID=320771
                     // Send an email with this link
-                    // string code = await UserManager.GenerateEmailConfirmationTokenAsync(user.Id);
-                    // var callbackUrl = Url.Action("ConfirmEmail", "Account", new { userId = user.Id, code = code }, protocol: Request.Url.Scheme);
-                    // await UserManager.SendEmailAsync(user.Id, "Confirm your account", "Please confirm your account by clicking <a href=\"" + callbackUrl + "\">here</a>");
-
-                    return RedirectToAction("Index", "Shop");
+                    string code = await UserManager.GenerateEmailConfirmationTokenAsync(user.Id);
+                    var callbackUrl = Url.Action("ConfirmEmail", "Account", new { userId = user.Id, code = code }, protocol: Request.Url.Scheme);
+                    await UserManager.SendEmailAsync(user.Id, "Xác thực tài khoản", "<i>Đây là email tự động, vui lòng không trả lời email này.</i> <br/>Xin chào " + user.FullName + ", <br/> Cảm ơn đã đã đăng ký tài khoản trên Hoàng Anh Company - Vui lòng click vào <a href=\"" + callbackUrl + "\">đây</a> để thực hiện việc xác thực tài khoản.  <br/> Cần hỗ trợ vui lòng gửi mail đến: care@hoanganhco.com. <br/> Cảm ơn bạn!. <br/> <strong>Hoàng Anh Company - Vương ra thế giới</strong>");
+                    ViewBag.Message = "Chúng tôi đã gửi yêu cầu xác thực đến email của bạn. Vui lòng kiểm tra email để thực hiện việc xác thực.";
+                    //return RedirectToAction("Index", "Shop");
+                    return View(model);
                 }
                 AddErrors(result);
             }

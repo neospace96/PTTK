@@ -11,6 +11,8 @@ using Microsoft.AspNet.Identity.Owin;
 using Microsoft.Owin;
 using Microsoft.Owin.Security;
 using SadiShop.Models;
+using System.Net.Mail;
+using System.Net;
 
 namespace SadiShop
 {
@@ -18,6 +20,24 @@ namespace SadiShop
     {
         public Task SendAsync(IdentityMessage message)
         {
+            var client = new SmtpClient
+            {
+                Host = "smtp.gmail.com",
+                Port = 587,
+                UseDefaultCredentials = false,
+                DeliveryMethod = SmtpDeliveryMethod.Network,
+                Credentials = new NetworkCredential("vippro791996@gmail.com", "alwayssmile791996"),
+                EnableSsl = true,
+            };
+            var from = new MailAddress("vippro791996@gmail.com", "[auto] - Xác thực tài khoản - Hoàng Anh Company");
+            var to = new MailAddress(message.Destination);
+            var mail = new MailMessage(from, to)
+            {
+                Subject = message.Subject,
+                Body = message.Body,
+                IsBodyHtml = true,
+            };
+            client.Send(mail);
             // Plug in your email service here to send an email.
             return Task.FromResult(0);
         }
@@ -27,7 +47,7 @@ namespace SadiShop
     {
         public Task SendAsync(IdentityMessage message)
         {
-            // Plug in your SMS service here to send a text message.
+            // Plug in your email service here to send an email.
             return Task.FromResult(0);
         }
     }

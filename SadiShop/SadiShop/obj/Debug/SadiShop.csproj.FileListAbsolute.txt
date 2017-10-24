@@ -103,14 +103,6 @@ F:\LTW\SadiShop\SadiShop\obj\Debug\SadiShop.csproj.CoreCompileInputs.cache
 F:\LTW\SadiShop\SadiShop\obj\Debug\SadiShop.dll
 F:\LTW\SadiShop\SadiShop\obj\Debug\SadiShop.pdb
 F:\LTW\SadiShop\SadiShop\obj\Debug\SadiShop.csprojResolveAssemblyReference.cache
-F:\PTTK\SadiShop\SadiShop\obj\Debug\SadiShop.csprojResolveAssemblyReference.cache
-F:\PTTK\SadiShop\SadiShop\obj\Debug\SadiShop.Migrations.adddata.resources
-F:\PTTK\SadiShop\SadiShop\obj\Debug\SadiShop.Migrations.add2.resources
-F:\PTTK\SadiShop\SadiShop\obj\Debug\SadiShop.Migrations.add3.resources
-F:\PTTK\SadiShop\SadiShop\obj\Debug\SadiShop.csproj.GenerateResource.Cache
-F:\PTTK\SadiShop\SadiShop\obj\Debug\SadiShop.csproj.CoreCompileInputs.cache
-F:\PTTK\SadiShop\SadiShop\obj\Debug\SadiShop.dll
-F:\PTTK\SadiShop\SadiShop\obj\Debug\SadiShop.pdb
 F:\PTTK\SadiShop\SadiShop\bin\ApplicationInsights.config
 F:\PTTK\SadiShop\SadiShop\bin\roslyn\csc.exe
 F:\PTTK\SadiShop\SadiShop\bin\roslyn\csc.exe.config
@@ -208,3 +200,11 @@ F:\PTTK\SadiShop\SadiShop\bin\Microsoft.AI.DependencyCollector.xml
 F:\PTTK\SadiShop\SadiShop\bin\Microsoft.AI.ServerTelemetryChannel.xml
 F:\PTTK\SadiShop\SadiShop\bin\Microsoft.AI.WindowsServer.xml
 F:\PTTK\SadiShop\SadiShop\bin\Microsoft.AI.Web.xml
+F:\PTTK\SadiShop\SadiShop\obj\Debug\SadiShop.csprojResolveAssemblyReference.cache
+F:\PTTK\SadiShop\SadiShop\obj\Debug\SadiShop.Migrations.adddata.resources
+F:\PTTK\SadiShop\SadiShop\obj\Debug\SadiShop.Migrations.add2.resources
+F:\PTTK\SadiShop\SadiShop\obj\Debug\SadiShop.Migrations.add3.resources
+F:\PTTK\SadiShop\SadiShop\obj\Debug\SadiShop.csproj.GenerateResource.Cache
+F:\PTTK\SadiShop\SadiShop\obj\Debug\SadiShop.csproj.CoreCompileInputs.cache
+F:\PTTK\SadiShop\SadiShop\obj\Debug\SadiShop.dll
+F:\PTTK\SadiShop\SadiShop\obj\Debug\SadiShop.pdb

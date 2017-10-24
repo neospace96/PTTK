@@ -13,6 +13,7 @@
         <div class=" clearfix">
             <div class="login" style="background-color: #fff; margin-bottom: 54px;margin-left: 200px;margin-right: 200px;">
                 <h2 style="text-align: center;padding-top: 20px;">ĐĂNG KÝ TÀI KHOẢN</h2>
+                <h2 style="text-align: center" , class="text-success">@ViewBag.Message</h2>:
                 <div class="login_form" action="javascript:void(0);" style=" width: 50%; margin: auto;padding-bottom: 20px;">
                     @using (Html.BeginForm("Register", "Account", FormMethod.Post, new { @class = "form-horizontal", role = "form" }))
                     {
