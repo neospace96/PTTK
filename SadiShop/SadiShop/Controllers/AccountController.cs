@@ -79,8 +79,8 @@ namespace SadiShop.Controllers
             switch (result)
             {
                 case SignInStatus.Success:
-                    //return RedirectToLocal(returnUrl);
-                    return RedirectToAction("Index", "Shop");
+                    return RedirectToLocal(returnUrl);
+                    //return RedirectToAction("Index", "Shop");
                 case SignInStatus.LockedOut:
                     return View("Lockout");
                 case SignInStatus.RequiresVerification:
@@ -450,7 +450,7 @@ namespace SadiShop.Controllers
             {
                 return Redirect(returnUrl);
             }
-            return RedirectToAction("Index", "Home");
+            return RedirectToAction("Index", "Shop");
         }
 
         internal class ChallengeResult : HttpUnauthorizedResult
